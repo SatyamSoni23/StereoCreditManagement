@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".calcActivity"
+    android:background="@drawable/back">
+
+    <EditText
+        android:id="@+id/input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="214dp"
+        android:hint=" Enter the amount to be transfer "
+        android:textStyle="bold|italic"
+        android:textColor="#4e342e"
+        android:textColorHint="#7b5e57"
+        android:textSize="20dp"
+        />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="#4e342e"
+        android:padding="10dp"
+        android:text="SUBMIT"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:onClick="store_input"
+        />
+
+</RelativeLayout>
