@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "804526924829",
+    "firebase_url": "https://stereocreditmanagement-73313.firebaseio.com",
+    "project_id": "stereocreditmanagement-73313",
+    "storage_bucket": "stereocreditmanagement-73313.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:804526924829:android:3baab4ac818096ce",
+        "android_client_info": {
+          "package_name": "com.example.stereocreditmanagement"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "804526924829-8nbf43g1g7ovc4unv1tcqee986fph8q0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.stereocreditmanagement",
+            "certificate_hash": "87232138418886e73f91b9f6cfb0c87b0f7de1f7"
+          }
+        },
+        {
+          "client_id": "804526924829-69qsc3oi5gquo39h81n4do208cap6jo1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjUqKP9vkZWFf6eHf53MAOYHc8VgkaoYw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "804526924829-69qsc3oi5gquo39h81n4do208cap6jo1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

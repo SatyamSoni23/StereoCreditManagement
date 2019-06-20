@@ -1,22 +1,53 @@
 package com.example.stereocreditmanagement;
 
 import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class shivaActivity extends AppCompatActivity {
+    public static String name = "NULL";
+    TextView textview;
     private Button button;
+    DatabaseReference rootRef, demoRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shiva);
         button = findViewById(R.id.mohan);
+
+        textview = (TextView)findViewById(R.id.shivaPoint);
+
+        rootRef = FirebaseDatabase.getInstance().getReference();
+        demoRef = rootRef.child("shiva");
+
+        demoRef.child("score").addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                String value = dataSnapshot.getValue(String.class);
+                textview.setText(value);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                name = "mohan";
                 openmohanActivity();
             }
         });
@@ -25,6 +56,7 @@ public class shivaActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                name = "amit";
                 openamitActivity();
             }
         });
@@ -33,6 +65,7 @@ public class shivaActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                name = "navneet";
                 opennavneetActivity();
             }
         });
@@ -41,6 +74,7 @@ public class shivaActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                name = "sanu";
                 opensanuActivity();
             }
         });
@@ -49,6 +83,7 @@ public class shivaActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                name = "aman";
                 openamanActivity();
             }
         });
@@ -57,6 +92,7 @@ public class shivaActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                name = "tajas";
                 opentajasActivity();
             }
         });
@@ -65,6 +101,7 @@ public class shivaActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                name = "vibhor";
                 openvibhorActivity();
             }
         });
@@ -73,6 +110,7 @@ public class shivaActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                name = "vinay";
                 openvinayActivity();
             }
         });
